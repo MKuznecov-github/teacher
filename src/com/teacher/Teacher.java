@@ -21,12 +21,12 @@ public class Teacher {
             System.out.println("Вы ввели не верно минуты");
             return;
         }
-
         System.out.printf("Указанное Вами время: %d:%d", hours, minutes);
 
         String work = " - Не рабочее время Преподавателя.";
         if (time <= 1000 || time >= 2000) {
             System.out.println(work);
+            return;
         }
 
             String result1 = " - Преподаватель свободен";
