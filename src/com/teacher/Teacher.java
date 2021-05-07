@@ -14,9 +14,11 @@ public class Teacher {
 
         int time = hours * 100 + minutes;
 
-        String result = " - Вы ввели не верное время";
-        if (time < 0 || time > 2400) {
-            System.out.println(result);
+        if (hours < 0 || hours > 24) {
+            System.out.println("Вы ввели неверные часы");
+            return;
+        } else if (minutes < 0 || minutes > 60) {
+            System.out.println("Вы ввели не верно минуты");
             return;
         }
 
@@ -37,5 +39,6 @@ public class Teacher {
                 result1 = " - Преподаватель занят";
             }
             System.out.println(result1);
+            return;
     }
 }
